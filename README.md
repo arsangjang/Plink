@@ -30,9 +30,9 @@ system("plink --bfile HM_CEU_REF --list-duplicate-vars suppress-first")
 
 system("plink --bfile HM_CEU_REF --list-duplicate-vars suppress-first --exclude Duplicate.txt --make-bed --out HM_CEU_REF_no_duplicate")
 ```
-#### Convert VCF file to bed file (plink format) 
+#### Convert VCF/vcf.gz/vcf.gz.tbi file to bed file (plink format) 
 ```{r}
-system("plink --vcf Yuor_vcf_data.vcf.gz --make-bed --out output_data")
+system("plink --vcf yuor_vcf_data.vcf.gz --make-bed --out output_data")
 ```
 
 #### Run plink in HPC cluster 
