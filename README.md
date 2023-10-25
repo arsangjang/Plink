@@ -8,6 +8,7 @@ Plink in Rstudio/ or HPC cluster envirenment
 ``` {r}
    # Set directory
    setwd("C:/Users/arsangjang/Desktop/plink")
+
    # Check the plink in your system // you sould get plink version
    system("plink")
    ```
@@ -18,6 +19,28 @@ Plink in Rstudio/ or HPC cluster envirenment
 ##### Frequency of HM_CEU_REF data and save the results in text file (HM_CEU_REF_frequency)
 ```{r}
    system("plink --file HM_CEU_REF --freq --out HM_CEU_REF_frequency")
+```
+
+#### Find and remove duplicated samples in .bed file // Check folder for results (plink.dupvar) // then save .dupvar as txt format (Exm: Duplicate.txt)
+**Change the HM_CEU_REF according to your file name*
+```{r}
+system("plink --bfile HM_CEU_REF --list-duplicate-vars")
+
+system("plink --bfile HM_CEU_REF --list-duplicate-vars suppress-first")
+
+system("plink --bfile HM_CEU_REF --list-duplicate-vars suppress-first --exclude Duplicate.txt --make-bed --out HM_CEU_REF_no_duplicate")
+```
+
+### Run plink in HPC cluster 
+```
+# Set directory in HPC
+(base) [sarsangjang@ln03 ~]$ cd /home/arsangjang/plink
+
+# Check the plink and its version in the cluster
+(base) [sarsangjang@ln03 plink]$ module spider plink
+
+# load plink module/ packge
+(base) [sarsangjang@ln03 plink]$ module load plink/2.0.0
 ```
    
    
