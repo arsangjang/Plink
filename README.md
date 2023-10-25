@@ -1,5 +1,5 @@
 ### Plink
-Plink in Rstudio/ or HPC cluster envirenment
+#### Plink in Rstudio
 
 1. Downlaod Plink source file from here [https://zzz.bwh.harvard.edu/plink/download.shtml]
 2. Create a folder and set it as working directory then copy downloaded file to this directory/ any files that you want use in the analysis must be copied in the directory
@@ -31,7 +31,7 @@ system("plink --bfile HM_CEU_REF --list-duplicate-vars suppress-first")
 system("plink --bfile HM_CEU_REF --list-duplicate-vars suppress-first --exclude Duplicate.txt --make-bed --out HM_CEU_REF_no_duplicate")
 ```
 
-### Run plink in HPC cluster 
+#### Run plink in HPC cluster 
 ```
 # Set directory in HPC
 (base) [sarsangjang@ln03 ~]$ cd /home/arsangjang/plink
