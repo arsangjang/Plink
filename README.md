@@ -34,6 +34,8 @@ system("plink --bfile HM_CEU_REF --list-duplicate-vars suppress-first --exclude 
 ```{r}
 system("plink --vcf yuor_vcf_data.vcf.gz --make-bed --out output_data")
 ```
+#### unzip tar.bz2 file
+system("bunzip -c your_file.tar.bz2 | tar xvf -")
 
 #### Run plink in HPC cluster 
 ```
