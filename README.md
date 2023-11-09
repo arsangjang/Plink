@@ -20,7 +20,10 @@
 ```{r}
    system("plink --file HM_CEU_REF --freq --out HM_CEU_REF_frequency")
 ```
-
+##### Analyse your_data
+``` {r}
+plink --bfile your_plink_data --freq --missing --hardy --out hla_stats
+```
 #### Find and remove duplicated samples in .bed file // Check folder for results (plink.dupvar) // then save .dupvar as txt format (Exm: Duplicate.txt)
 **Change the HM_CEU_REF according to your file name*
 ```{r}
