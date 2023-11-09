@@ -33,6 +33,7 @@ system("plink --bfile HM_CEU_REF --list-duplicate-vars suppress-first")
 
 system("plink --bfile HM_CEU_REF --list-duplicate-vars suppress-first --exclude Duplicate.txt --make-bed --out HM_CEU_REF_no_duplicate")
 ```
+
 #### Convert VCF/vcf.gz/vcf.gz.tbi (or Ped) file to bed file (plink format) 
 ```{r}
 system("plink --vcf yuor_vcf_data.vcf.gz --make-bed --out output_data")
@@ -52,5 +53,9 @@ system("bunzip -c your_file.tar.bz2 | tar xvf -")
 # load plink module/ packge
 (base) [sarsangjang@ln03 plink]$ module load plink/2.0.0
 ```
+#### Exclude multiallelic variation from vcf data
+```
+(base) [sarsangjang@ln03 ~]$ bcftools view --max-alleles 2 -O z -o filtered_dataset_biallel.vcf.gz filtered_dataset.vcf.gz
+``` 
    
    
