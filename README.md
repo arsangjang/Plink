@@ -9,7 +9,7 @@
    # Set directory
    setwd("C:/Users/arsangjang/Desktop/plink")
 
-   # Check the plink in your system // you sould get plink version
+   # Check the plink in your system // you should get plink version
    system("plink")
    ```
 ##### Read the bed files // your bed files (HM_CEU_REF) must be in the directory folder
